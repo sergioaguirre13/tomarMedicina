@@ -78,6 +78,14 @@ tomarAmlodipina.addEventListener("click", function () {
   intBlisterAmlo -= 1;
   blisterAmlo.textContent = intBlisterAmlo;
 
+  let cuestion = confirm("¿ Estas seguro de tomar una AMLODIPINA ?");
+
+  if (!cuestion) {
+    intBlisterAmlo += 1;
+    blisterAmlo.textContent = intBlisterAmlo;
+    return; // Salir de la función
+  }
+
   if (intBlisterAmlo < 1) {
     intBlisterAmlo = 8;
     intCajasAmlo -= 1;
@@ -92,6 +100,15 @@ tomarAmlodipina.addEventListener("click", function () {
 tomarValsartan.addEventListener("click", function () {
   intBlisterValsar -= 1;
   blisterValsar.textContent = intBlisterValsar;
+
+  let cuestion = confirm("¿ Estas seguro de tomar una AMLODIPINA ?");
+
+  if (!cuestion) {
+    intBlisterValsar += 1;
+    blisterValsar.textContent = intBlisterValsar;
+        return; // Salir de la función
+  }
+
 
   if (intBlisterValsar < 1) {
     intBlisterValsar = 6;
